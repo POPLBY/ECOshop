@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cc7c0899-2c0a-46a2-bc37-d14e00acedef" name="wamp" url="http://localhost/Ecoshop">
+        <fileTransfer port="0" mountedRoot="C:\wamp64\www\EcoShop" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
