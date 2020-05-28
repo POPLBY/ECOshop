@@ -4,17 +4,20 @@ $type = $_POST['type'];
 $name = $_POST["user"];
 $pwd = $_POST["pwd"];
 $Db = new connDB('localhost','root','123','db_ecoshop','3308','utf-8');    //实例化connDb
-$conn = $Db->connect();                                                                                         //获取数据库连接对象
+$conn = $Db->connect();         //获取数据库连接对象
+
 //根据用户类型判断用户名和密码
 if($type == '0'){
-    $sql = mysqli_query($conn, "select * from tb_admin where name = '$name' and pwd = '$pwd'");     //管理员
+    $sql = "select * from tb_admin where name = '$name' and pwd = '$pwd'";      //管理员
+    $rs = $Db->useSQL($sql);
 } else {
-    $sql = mysqli_query($conn, "select * from tb_user where name = '$name' and pwd = '$pwd'");      //用户
+    $sql = "select * from tb_user where name = '$name' and pwd = '$pwd'";       //用户
+    $rs = $Db->useSQL($sql);
 }
-$finaly = mysqli_fetch_array($sql);     //将查询结果赋值
-if ($finaly > 0) {
+
+if ($rs > 0 || $rs) {
     session_start();
-    $_SESSION['user'] = $finaly;
+    $_SESSION['user'] = $rs;
     //设置登录类型
     if($type == '0') {
         $_SESSION['type'] = 'admin';    //设置为管理员
