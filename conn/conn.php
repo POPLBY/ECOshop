@@ -22,7 +22,7 @@ class connDB {
         $this->code = $code;
     }
 
-    function connect() {                //数据库连接方法
+    function getConnect() {                //数据库连接方法
         $this->conn = mysqli_connect("$this->host","$this->user","$this->password","$this->database","$this->port") or die("连接数据失败！".mysqli_error());
         mysqli_query($this->conn,"set names $this->code");
         return $this->conn;
