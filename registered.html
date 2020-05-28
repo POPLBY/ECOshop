@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎注册</title>
+</head>
+<body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="css/loginregis.css">
+    <script>
+        function check(form) {
+            var name = document.getElementById("name").value
+            if (name == "") {
+                alert("用户名不能为空！")
+                return false
+            }
+
+            var pwd = document.getElementById("pwd").value
+            if (pwd == "") {
+                alert("密码不能为空！")
+                return false
+            }
+
+            var pattern = /[0-9-()（）]{7,18}/
+            if (form.dianhua.value == '' || !(pattern.test(form.dianhua.value))) {
+                alert("电话为空或者电话格式有误！")
+                return false
+            }
+
+            var pattern = /\d{6}/
+            if (form.youbian.value == '' || !(pattern.test(form.youbian.value))) {
+                alert("邮编为空或者邮编格式有误！")
+                return false
+            }
+
+            var dizhi = document.getElementById("dizhi").value
+            if (dizhi == '') {
+                alert("收货地址不能为空！")
+                return false
+            }
+
+            var pattern = /[1-9]([0-9]{4,10})/
+            if (form.qq.value == '' || !(pattern.test(form.qq.value))) {
+                alert("QQ号为空或者QQ号格式有误！")
+                return false
+            }
+
+            var timu = document.getElementById("timu").value
+            if (timu== "") {
+                alert("找回题目不能为空！")
+                return false
+            }
+
+            var daan = document.getElementById("daan").value
+            if (daan == "") {
+                alert("找回答案不能为空！")
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+<div name="head" align="center">
+    <img src="images/Logo.png" alt="logo">
+    <br>
+    <label style="font-size: 28px">欢迎注册</label>
+</div>
+<div align="center">
+    <form  name="regisForm" action="registered.php" method="post" onsubmit="return check(regisForm)">
+        <label style="font-size: 20px">用&nbsp&nbsp户&nbsp&nbsp名：</label>
+        <input type="text" id="name" name="name">
+        <br>
+
+        <label style="font-size: 20px">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</label>
+        <input type="password" id="pwd" name="pwd">
+        <br>
+
+        <label style="font-size: 20px">联系电话：</label>
+        <input type="text" id="dianhua" name="dianhua">
+        <br>
+
+        <label style="font-size: 20px">用户邮编：</label>
+        <input type="text" id="邮编" name="youbian">
+        <br>
+
+        <label style="font-size: 20px">收货地址：</label>
+        <input type="text" id="dizhi" name="dizhi">
+        <br>
+
+        <label style="font-size: 20px">Q&nbspQ&nbsp号码：</label>
+        <input type="text" id="qq" name="qq">
+        <br>
+
+        <label style="font-size: 20px">找回题目：</label>
+        <input type="text" id="timu" name="timu">
+        <br>
+
+        <label style="font-size: 20px">找回答案：</label>
+        <input type="text" id="daan" name="daan">
+        <br>
+
+        <input type="submit" value="注册">
+        <br>
+        <input type="reset" value="清空">
+        <br>
+        <a href="login.html">已有账号？点击登录！</a>
+    </form>
+</div>
+</body>
+</html>
+
+</body>
+</html>
