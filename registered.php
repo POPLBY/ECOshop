@@ -10,17 +10,55 @@ $qq = $_POST['qq'];
 $timu = $_POST['timu'];
 $daan = $_POST['daan'];
 
+if ($name == "") {
+    echo "<script>alert('姓名输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
+if ($pwd == "") {
+    echo "<script>alert('密码输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
+if ($dianhua == "") {
+    echo "<script>alert('电话输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
+if ($youbian == "") {
+    echo "<script>alert('邮编输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
+if ($dizhi == "") {
+    echo "<script>alert('地址输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
+if ($qq == "") {
+    echo "<script>alert('QQ输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
+if ($timu == "") {
+    echo "<script>alert('题目输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
+if ($daan == "") {
+    echo "<script>alert('答案输入有误');location.href = 'registered.html'</script>";
+    exit();
+}
+
 $Db = new connDB('localhost', 'root', '123', 'db_ecoshop', '3308', 'utf-8');    //实例化connDb //获取数据库连接对象
 $conn = $Db->getConnect();
-
-//INSERT INTO `tb_user` (`id`, `name`, `pwd`, `dianhua`, `youbian`, `dizhi`, `qq`, `timu`, `daan`) VALUES (NULL, '1', '12345', '11111111111', '100010', '长江师范学院', '111111111', '你是哪个学校？', '长江师范学院');
 
 $sql = "insert into `tb_user` (`id`, `name`, `pwd`, `dianhua`, `youbian`, `dizhi`, `qq`, `timu`, `daan`) VALUES (NULL,'$name','$pwd','$dianhua','$youbian','$dizhi','$qq','$timu','$daan')";
 $rs = $Db->useSQL($sql);
 if ($rs) {
-    echo "<script>alert('创建成功！');location.href ='login.html'</script>";
+    echo "<script>alert('注册成功！');location.href = 'login.html'</script>";
 } else {
-    echo "<script>alert('创建失败！');location.href ='registered.html'</script>";
+    echo "<script>alert('注册失败！');location.href = 'registered.html'</script>";
 }
 //根据用户类型判断用户名和密码
 
