@@ -13,7 +13,7 @@ body {
 
 #main {
     margin-top: 150px;
-    margin-left: 100px;
+    margin-left: 200px;
     margin-right: 100px;
     position: absolute;
     /*border: black solid;*/
@@ -22,14 +22,14 @@ body {
 .left {
     position: absolute;
     width: 650px;
-    background: #9B410E;
+    /*background: #9B410E;*/
 }
 
 .right {
     position: absolute;
     margin-left: 700px;
     width: 1000px;
-    border: #9B410E solid;
+    /*border: #9B410E solid;*/
     height: 500px;
 }
 
@@ -54,7 +54,7 @@ body {
     float: right;
 }
 .buy{
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 input[type=submit] {
@@ -72,7 +72,7 @@ input[type=text] {
     align: center;
     width: 30px;
     background-color: silver;
-    color: white;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -98,5 +98,5 @@ input[type=text] {
 
 #xiaoliang{
     font: 15px '微软雅黑 Light';
-    color: red;
+    color: deeppink;
 }
