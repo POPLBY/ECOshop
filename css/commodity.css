@@ -1,0 +1,102 @@
+body {
+    border-style:none;
+}
+
+.header {
+    position: absolute;
+    height: 100px;
+    width: 120%;
+    margin-left: -20px;
+    margin-top: -20px;
+    background: black;
+}
+
+#main {
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    position: absolute;
+    /*border: black solid;*/
+}
+
+.left {
+    position: absolute;
+    width: 650px;
+    background: #9B410E;
+}
+
+.right {
+    position: absolute;
+    margin-left: 700px;
+    width: 1000px;
+    border: #9B410E solid;
+    height: 500px;
+}
+
+.img {
+    width: 650px;
+    height: 500px;
+}
+.ps {
+
+    margin-top: 20px;
+    width: 1000px;
+}
+.price{
+    width: 700px;
+    position: relative;
+    float: left;
+}
+.sales{
+    margin-top: 40px;
+    width: 300px;
+    position: relative;
+    float: right;
+}
+.buy{
+    margin-top: 150px;
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    align: center;
+    width: 30px;
+    background-color: silver;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.zekou {
+    font:30px '微软雅黑';
+    color: red;
+}
+
+.shichang {
+    font:20px '华文细黑';
+    color:silver;
+    text-decoration: line-through;
+}
+
+#xiangqing{
+    font: 20px '微软雅黑 Light';
+    color: red;
+}
+
+#xiaoliang{
+    font: 15px '微软雅黑 Light';
+    color: red;
+}

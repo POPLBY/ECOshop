@@ -10,8 +10,8 @@
 </head>
 <body>
 <div class="a">
-<span>热门商品</span>
-        &nbsp  &nbsp  &nbsp  &nbsp
+    <span>热门商品</span>
+    &nbsp  &nbsp  &nbsp  &nbsp
     <span>整点秒杀</span>
     &nbsp  &nbsp  &nbsp  &nbsp
     <span>推荐商品</span>
