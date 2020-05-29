@@ -60,7 +60,7 @@ if ($rs) {
 } else {
     echo "<script>alert('注册失败！');location.href = 'registered.html'</script>";
 }
-//根据用户类型判断用户名和密码
+
 
 
 
