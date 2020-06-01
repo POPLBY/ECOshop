@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:style="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>{$row[1]}</title>
     <link rel="stylesheet" type="text/css" href="css/commodity.css">
 </head>
 <body>
-<div class="header" >
-
-</div>
 <div id="main" >
     <div class="left">
         <a href="#"><img src="{$row[10]}" alt="加载中..." class="img"></a>
@@ -46,7 +43,16 @@
             </form>
         </div>
     </div>
+    <div class="pingjia">
+        <br>
+        <div>
+            <h3>商品评价：</h3>
+        </div>
+        <p>{$pj[3]}</p>
+        <p>{$pj[4]}</p>
+        <br>
+        <br>
+    </div>
 </div>
-
 </body>
 </html>

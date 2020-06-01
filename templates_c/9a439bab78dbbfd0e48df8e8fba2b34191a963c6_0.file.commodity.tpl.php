@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-01 01:30:03
+/* Smarty version 3.1.34-dev-7, created on 2020-05-29 06:58:07
   from 'F:\wamp64\www\EcoShop\commodity.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ed45a1b122a14_36337234',
+  'unifunc' => 'content_5ed0b27f599969_85217451',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '81425ceb5152994b0b9c90889d6cb5912b0938dd' => 
+    '9a439bab78dbbfd0e48df8e8fba2b34191a963c6' => 
     array (
       0 => 'F:\\wamp64\\www\\EcoShop\\commodity.html',
-      1 => 1590974995,
+      1 => 1590732757,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ed45a1b122a14_36337234 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ed0b27f599969_85217451 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html lang="en" xmlns:style="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title><?php echo $_smarty_tpl->tpl_vars['row']->value[1];?>
@@ -30,6 +30,9 @@ function content_5ed45a1b122a14_36337234 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" type="text/css" href="css/commodity.css">
 </head>
 <body>
+<div class="header" >
+
+</div>
 <div id="main" >
     <div class="left">
         <a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['row']->value[10];?>
@@ -75,19 +78,8 @@ function content_5ed45a1b122a14_36337234 (Smarty_Internal_Template $_smarty_tpl)
             </form>
         </div>
     </div>
-    <div class="pingjia">
-        <br>
-        <div>
-            <h3>商品评价：</h3>
-        </div>
-        <p><?php echo $_smarty_tpl->tpl_vars['pj']->value[3];?>
-</p>
-        <p><?php echo $_smarty_tpl->tpl_vars['pj']->value[4];?>
-</p>
-        <br>
-        <br>
-    </div>
 </div>
+
 </body>
 </html><?php }
 }

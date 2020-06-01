@@ -1,7 +1,7 @@
 body {
     border-style:none;
 }
-
+/**/
 .header {
     position: absolute;
     height: 100px;
@@ -12,23 +12,28 @@ body {
 }
 
 #main {
-    margin-top: 150px;
-    margin-left: 200px;
+    /*margin-top: 150px;*/
+    display: inline;
+    margin-left: 300px;
     margin-right: 100px;
     position: absolute;
     /*border: black solid;*/
 }
 
 .left {
-    position: absolute;
+    display: inline-block;
+    position: relative;
     width: 650px;
+    float: left;
     /*background: #9B410E;*/
 }
 
 .right {
-    position: absolute;
-    margin-left: 700px;
-    width: 1000px;
+    /*float: left;*/
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    /*width: 1000px;*/
     /*border: #9B410E solid;*/
     height: 500px;
 }
@@ -38,18 +43,17 @@ body {
     height: 500px;
 }
 .ps {
-
     margin-top: 20px;
-    width: 1000px;
+    /*width: 1000px;*/
 }
 .price{
-    width: 700px;
+    width: 500px;
     position: relative;
     float: left;
 }
 .sales{
     margin-top: 40px;
-    width: 300px;
+    width: 150px;
     position: relative;
     float: right;
 }
@@ -99,4 +103,10 @@ input[type=text] {
 #xiaoliang{
     font: 15px '微软雅黑 Light';
     color: deeppink;
+}
+
+#pingjia {
+    position: relative;
+    display: inline;
+    float: left;
 }
