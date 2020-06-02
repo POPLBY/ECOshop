@@ -1,6 +1,6 @@
 <?php
 /* Smarty version 3.1.34-dev-7, created on 2020-06-01 02:20:10
-  from 'F:\wamp64\www\EcoShop\index.html' */
+  from 'F:\wamp64\www\EcoShop\index.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
