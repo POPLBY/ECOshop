@@ -343,6 +343,16 @@ div.show2 p {
     font-size: 5px;
 }
 
+div.show3 p {
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 1px;
+    position: relative;
+    top: 10px;
+    left:18%;
+    font-size: 5px;
+
+}
+
 div.show3 {
     z-index: 500;
     position: absolute;
@@ -376,6 +386,15 @@ div.show4 {
     border-radius: 20px;
 }
 
+div.show4 p {
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 1px;
+    position: relative;
+    top: 10px;
+    left:22%;
+    font-size: 5px;
+
+}
 div.show4 img {
     position: relative;
     left: 5%;

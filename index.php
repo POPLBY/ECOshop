@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>主页</title>
 </head>
-<header>                                        <!--定义导航栏以及标题栏部分  -->
+<header>
+    <!--定义导航栏以及标题栏部分  -->
     <div id="intos">
         <a href="login.html"> 登录</a>
     </div>
@@ -17,11 +18,12 @@
         <span><img src="images/Logo.png" id="img_logo"></span>
         <div class="child">
 
-            <form name="form0" method="post" action="#">
+            <form name="form0" method="post" action="serch.php">
 
 
                 搜索: &nbsp &nbsp<input type="text" name="txt" id="txt"
                                       style="width:200px; height:40px; border-radius: 15px 15px">
+                <input type="submit" name="submit" value="确定"/>
             </form>
         </div>
     </div>
@@ -115,13 +117,14 @@
 </div>
 
 <div class="show3">
-    <a href="#"><img src="images/sairui_rival3.PNG" width="270px" height="270px"></a>
-
+    <a href="#"><img src="images/sanxing.PNG" width="270px" height="270px"></a>
+    <p><a href="#">三星显示器</a></p>
 </div>
 
 <div class="show4">
     <a href="#">
-        <img src="images/akko.PNG" width="270px" height="270">
+        <img src="images/soni.PNG" width="270px" height="270">
+        <p><a href="#">索尼耳机</a></p>
     </a>
 </div>
 
@@ -131,21 +134,24 @@
     <p>推荐商品</p> <img src="images/logo3.png" width="200px" height="200px;">
 </div>
 <div class="tuijian">
-    <a href="#"> <img src="{$row[10]}" width="80%" height="280px">
 
-    </a>
-<!--    <a href="#"> <img src="{$row[11]}" width="80%" height="280px" id="imge" onmouseover="link(false)"-->
-<!--                      onmouseout="link(true)">-->
+   <a href="#"> <img src="images/akko.PNG" width="80%" height="280px" id="imge" onmouseover="link(false)" onmouseout="link(true)">
 
-<!--    </a>-->
+  </a>
 </div>
 
 </body>                                                     <!-- 切换图片函数-->
 <script>
-    var arrays = ["{$row[11]}", "{$row[11]}"];
+
+    var arrays=new Array({$arra});
+
+
+
+
     var i = 0;
     var x;
     var b;
+
 
     function link(b) {
         if (b == true)
@@ -155,13 +161,16 @@
     }
 
     function change() {
-        if (i > 1)
+       if (i > 1)
             i = 0;
         var x1 = document.getElementById("imge");
-        x1.src = arrays[i];
-        i++;
+        x1.src = arrays[0][i][10];
 
+
+      console.log(x1.src);
+i++;
     }
+
 
 
 </script>

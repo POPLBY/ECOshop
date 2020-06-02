@@ -1,0 +1,12 @@
+div.information{
+    position: relative;
+    background-color: rgba(255,244,45,1);
+    width: 60%;
+    height:350px;
+    left:15%;
+}
+div.information table
+{
+    position:relative;
+    left:25%;
+}
