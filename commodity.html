@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:style="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>{$row[1]}</title>
+    <link rel="stylesheet" type="text/css" href="css/commodity.css">
+</head>
+<body>
+<div id="main" >
+    <div class="left">
+        <a href="#"><img src="{$row[10]}" alt="加载中..." class="img"></a>
+    </div>
+    <div class="right">
+        <h1>{$row[1]}</h1>
+        <span id="xiangqing">{$row[11]}</span>
+        <br>
+        <br>
+        <span>{$row[2]}</span>
+        <br>
+        <div class="ps">
+            <div class="price">
+                <span class="zekou">折扣价：</span>
+                <br>
+                <span class="zekou">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp￥{$row[5]}</span>
+                <br>
+                <br>
+                <span class="shichang">市场价：</span>
+                <span class="shichang">￥{$row[4]}</span>
+            </div>
+
+            <div class="sales">
+                <span id="xiaoliang">销量：{$row[7]}</span>
+            </div>
+        </div>
+
+        <div class="buy">
+            <form action="#">
+                <span style="font: 20px '微软雅黑';">请输入购买数量：</span>
+                <input type="text" name="shuliang" placeholder="1">
+                <span>库存：{$row[6]}</span>
+                <br>
+                <input type="submit" name="buy" value="加入购物车">
+            </form>
+        </div>
+    </div>
+    <div class="pingjia">
+        <br>
+        <div>
+            <h3>商品评价：</h3>
+        </div>
+        <p>{$pj[3]}</p>
+        <p>{$pj[4]}</p>
+        <br>
+        <br>
+    </div>
+</div>
+</body>
+</html>

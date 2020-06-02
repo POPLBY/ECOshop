@@ -33,7 +33,7 @@ if ($rs > 0 || $rs) {
     }else {
         $_SESSION['type'] = 'user';     //设置为普通用户
     }
-    echo "<script>alert('欢迎登录！');location.href = 'index.php'</script>";
+    echo "<script>alert('欢迎登录！');location.href = 'index.html'</script>";
 } else {
     echo "<script>alert('用户名或密码错误！');location.href ='login.html'</script>";
 }

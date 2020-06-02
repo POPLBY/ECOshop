@@ -13,7 +13,7 @@ class connDB {
     private $sqlType;   //sql语句类型
     private $rs;        //查询结果
 
-    function __construct($host,$user,$password,$database,$port,$code) {     //构造函数
+    function __construct($host,$user,$password,$database,$port,$code) {     //构造方法
         $this->host = $host;
         $this->user = $user;
         $this->database = $database;
