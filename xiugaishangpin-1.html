@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        table,td{
+            border: 1px solid #020202;
+            width: 850px;
+            text-align: center;
+        }
+        td{
+            height: 30px;
+        }
+        .ca1 .tr1{
+            height: 50px;
+            background-color: #fff11b;
+            color: #ff5a5a;
+        }
+        td:first-child{
+            width: 250px;
+        }
+        input{
+            border:0px;
+            width: 100%;
+            background: #d9fff5;
+            height: 100%;
+            text-indent: 1em;
+        }
+        .submit,.reset{
+            height: 25px;
+            width: 50px;
+            background: #eeeeee;
+            border:1px solid #020202;
+            border-radius: 5px;
+            text-align: center;
+            text-indent: 0em;
+        }
+    </style>
+</head>
+<body>
+<form method="post" class="form">
+    <table class="ca1">
+        <tr class="tr1">
+            <td colspan="2" class="td1" align="center">修改商品</td>
+        </tr>
+        <tr>
+            <td>商品编号：</td>
+            <td><input name="text1" type="text" placeholder="商品编号" id="t1" pattern="^\d{1,4}$" maxlength="4"/></td>
+        </tr>
+        <tr>
+            <td>商品名称：</td>
+            <td><input name="text2" type="text" placeholder="商品名称" id="t2"/></td>
+        </tr>
+        <tr>
+            <td>商品品牌：</td>
+            <td><input name="text3" type="text" placeholder="商品品牌" id="t3"/></td>
+        </tr>
+        <tr>
+            <td>商品类别：</td>
+            <td><input name="text4" type="text" placeholder="商品类别" id="t4" pattern="^\d{1,4}$" maxlength="4"/></td>
+        </tr>
+        <tr>
+            <td>市场价：</td>
+            <td><input name="text5" type="text" placeholder="市场价" id="t5"/></td>
+        </tr>
+        <tr>
+            <td>折扣价：</td>
+            <td><input name="text6" type="text" placeholder="折扣价" id="t6"/></td>
+        </tr>
+        <tr>
+            <td>商品数量：</td>
+            <td><input name="text7" type="text" placeholder="商品数量" id="t7" pattern="^\d{1,4}$" maxlength="4"/></td>
+        </tr>
+        <tr>
+            <td>是否推荐：</td>
+            <td><input name="text8" type="text" placeholder="是否推荐" id="t8" pattern="^\d{1,4}$" maxlength="4"/></td>
+        </tr>
+        <tr>
+            <td>上市时间：</td>
+            <td><input name="text9" type="text" placeholder="上市时间" id="t9"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="修改" class="submit">
+                <input type="reset" class="reset">
+            </td>
+        </tr>
+    </table>
+   <a href="javascript:" onclick="self.location=document.referrer;">返回</a>
+</form>
+</body>
+</html>

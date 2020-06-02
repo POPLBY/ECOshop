@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改管理员信息</title>
+</head>
+<body>
+<script type="text/javascript">
+    function checkform(form){
+        if(form.t1.value==""){
+            alert("请输入姓名");
+            form.t1.focus();
+            return false;
+        }
+        if(form.t2.value==""){
+            alert("请输入密码");
+            form.t2.focus();
+            return false;
+        }
+    }
+</script>
+<form id="form1" name="form1" method="post" action="" onsubmit="return checkform(form1)">
+    <table>
+        <tr>
+            <td>管理员姓名：</td>
+            <td><input type="text" id="t1"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="text" id="t2" pattern="^{6,15}$" maxlength="4"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="1"align="left">
+                <input type="submit" value="修改">
+                <input type="reset">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
