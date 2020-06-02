@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询订单</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        table{
+            border: 1px solid #020202;
+            width: 850px;
+            text-align: center;
+        }
+        tr,td{
+            height: 30px;
+            border: 1px solid black;
+        }
+        .tr1{
+            height: 50px;
+            background-color: #fff11b;
+            color: #ff5a5a;
+        }
+        .text1,.text2{
+            border:0px;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    <table class="table1">
+        <tr class="tr1">
+            <td colspan="4" class="td1">查询订单</td>
+        </tr>
+        <tr>
+            <td>下订单人姓名：</td>
+            <td><input type="text" class="text1" id="t1"></td>
+            <td>订单号：</td>
+            <td><input type="text" class="text2" id="t2"></td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center"><input type="submit" value=" 查找 ">  <input type="reset" value=" 重置 "></td>
+        </tr>
+    </table>
+    <br/>
+    <table class="table2">
+        <tr class="tr1">
+            <td colspan="7" class="td1">查询结果</td>
+        </tr>
+        <tr class="tr2">
+            <td>订单号</td>
+            <td>下单用户</td>
+            <td>订货人</td>
+            <td>金额总计</td>
+            <td>付款方式</td>
+            <td>收款方式</td>
+            <td>订单状态</td>
+        </tr>
+        <tr class="tr3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
