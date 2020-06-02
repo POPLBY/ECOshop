@@ -1,0 +1,34 @@
+table,td{
+    border: 1px solid #020202;
+    width: 850px;
+    text-align: center;
+}
+p{
+    color: #ff5a5a;
+}
+.ca11{
+    height: 5px;
+}
+.ca12 td{
+    width:auto;
+}
+.ca12 .td2{
+    width: 250px;
+}
+.ca12 .td2 input{
+    border: 0px;
+    width: 240px;
+    height: 100%;
+}
+.ca2 .tr1{
+    height: 50px;
+}
+.ca2 .tr2{
+    height: 25px;
+}
+.ca3 .td1{
+    width: 200px;
+}
+.ca11,.tr1{
+    background-color: #fff11b;
+}
