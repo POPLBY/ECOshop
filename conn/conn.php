@@ -1,5 +1,3 @@
-<!--如果某页面需要连接数据库，请在使用前添加一下代码：-->
-<!--include('conn/conn.php');-->
 <?php
 class connDB {
     private $conn;
@@ -40,7 +38,7 @@ class connDB {
             } else {
                 return $arrayData;
             }
-        } elseif ($this->sqlType == 'insert' || $this->sqlType == 'updata' || $this->sqlType == 'delete') {
+        } elseif ($this->sqlType == 'insert' || $this->sqlType == 'update' || $this->sqlType == 'delete') {
             return $this->rs;
         } else {
             return false;
