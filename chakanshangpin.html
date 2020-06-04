@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-<table>
+<table id="table1">
     <tr class="tr1">
         <td colspan="12" class="td1" align="center">浏览商品</td>
     </tr>
@@ -40,21 +40,39 @@
         <td class="top">商品简介</td>
     </tr>
 
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
+<!--    <tr>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--    </tr>-->
 </table>
-
+<script>
+    var sp = {$sp}
+    console.log(sp)
+    var n = 0
+    var table = document.getElementById('table1')
+    while(sp[n]) {
+        var tr = document.createElement("tr")
+        var i = 0
+        while (i<12) {
+            var td = document.createElement("td")
+            td.innerHTML = sp[n][i]
+            tr.appendChild(td)
+            i++
+        }
+        console.log(tr)
+        table.appendChild(tr)
+        n++
+    }
+</script>
 </body>
 </html>
