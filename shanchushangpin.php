@@ -97,25 +97,7 @@
     </tr>";
 
     ?>
-    <!--  <tr>
-        <td><input type="checkbox" name="" id="chk" value=""></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><a href="" onclick = "">删除</a></td>
-    </tr>
-    <tr>
-        <td colspan="11" class="m_td">
-            <a href="" onClick="">全部选择/取消</a>&nbsp;&nbsp;
-            <input type="hidden" name="action" value="delall"><input type="submit" value="删除选择" onclick = ''>&nbsp;&nbsp;
-        </td>
-    </tr>  -->
+
 </table>
 
 </body>

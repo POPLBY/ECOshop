@@ -67,29 +67,23 @@
 
 
 <div class="round">    <!--round：四个圆形盒子 -->
-    <div class="in">
-
-    </div>
+    <a href="serch.php?id=1"> <p>显示器</p></a>
 </div>
 
 
 <div class="round2">
-    <div class="in2">
 
-    </div>
+        <a href="serch.php?id=3"> <p>鼠标</p></a>
+
 </div>
 
 <div class="round3">
 
-    <div class="in3">
-
-    </div>
+    <a href="serch.php?id=2"> <p>键盘</p></a>
 </div>
 
 <div class="round4">
-    <div class="in4">
-
-    </div>
+    <a href="serch.php?id=4"> <p>耳机</p></a>
 </div>
 
 <div class="B">
@@ -103,27 +97,27 @@
 </div>
 
 <div class="show">                                                   <!-- show:商品展示盒子-->
-    <a href="#">
-        <img src="images/sairui_rival3.PNG" width="270px" height="280px"/>
+    <a href="commodity.php?id=6">
+        <img src="images/X尔23.png" width="270px" height="280px"/>
     </a>
     <p>
-        <a href="#">赛睿rival 3</a>
+        <a href="commodity.php?id=6">X尔23显示器</a>
     </p>
 </div>
 <div class="show2">
-    <a href="#"><img src="images/akko.PNG" width="270px" height="270px"></a>
-    <p><a href="#">akko3108键盘</a></p>
+    <a href="commodity.php?id=7"><img src="images/X尔24.png" width="270px" height="270px"></a>
+    <p><a href="commodity.php?id=7">X尔24显示器</a></p>
 </div>
 
 <div class="show3">
-    <a href="#"><img src="images/sanxing.PNG" width="270px" height="270px"></a>
-    <p><a href="#">三星显示器</a></p>
+    <a href="commodity.php?id=19"><img src="images/S睿SteelSeries Rival 600鼠标.jpg" width="270px" height="270px"></a>
+    <p><a href="commodity.php?id=19">S睿600鼠标</a></p>
 </div>
 
 <div class="show4">
-    <a href="#">
-        <img src="images/soni.PNG" width="270px" height="270">
-        <p><a href="#">索尼耳机</a></p>
+    <a href="commodity.php?id=28">
+        <img src="images/E硕ROG Fusion700耳机.png" width="270px" height="270">
+        <p><a href="commodity.php?id=28">E硕ROG Fusion700耳机</a></p>
     </a>
 </div>
 
@@ -134,7 +128,7 @@
 </div>
 <div class="tuijian">
 
-   <a href="#" id="link_node"> <img src="images/akko.PNG" width="80%" height="280px" id="imge" onmouseover="link(false)" onmouseout="link(true)">
+   <a href="#" id="link_node"> <img src="images/E亚海魔Razer耳机.png" width="80%" height="280px" id="imge" onmouseover="link(false)" onmouseout="link(true)">
 
   </a>
 </div>
@@ -150,8 +144,8 @@
     var i = 0;
     var x;
     var b;
-
-
+    var n;
+ n={$len};
     function link(b) {
         if (b == true)
             x = setInterval(change, 1000);
@@ -160,7 +154,7 @@
     }
 
     function change() {
-       if (i > 1)
+       if (i > n)
             i = 0;
         var x1 = document.getElementById("imge");
         var t=document.getElementById("link_node");
@@ -181,7 +175,7 @@ i++;
         距离秒杀还有:<span id="time"></span>结束
 
     </span>
-    <a href="#" id="aa"> <img src="images/akko.PNG" width="300px" height="300px" id="tp"></a>
+    <a href="commodity.php?id=40" id="aa"> <img src="images/S果iPhone%2011手机.png" width="300px" height="300px" id="tp"></a>
 </div>
 <script>
 var f=document.getElementById("timesell");
@@ -238,7 +232,7 @@ var timer = setInterval(function () {
     var node=document.getElementById("aa");
     var node2=document.getElementById("tp");
     node.removeChild(node2);
-    alert("抢购结束请下次一定来Wdnmd");
+   x.innerHTML="抢购结束";
     }
 
 
