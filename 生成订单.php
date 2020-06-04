@@ -1,5 +1,5 @@
 <?php
-include ('checkSession.php');
+//include ('checkSession.php');
 
 include ('admin/conn/conn.php');
 $Db = new connDB('localhost', 'root', '123', 'db_ecoshop', '3308', 'utf-8');
@@ -8,9 +8,11 @@ $conn = $Db->getConnect();
 include ('libs/Smarty.class.php');
 $smarty = new Smarty();
 
-$userid = $_SESSION['user_id'];
+//$userid = $_SESSION['user_id'];
+$userid = 2;
 $dingdanhao = date("YmjHis").$userid;
-print($dingdanhao);
+$shijian = date("YmjHis");
+//print($shijian);
 
 $sql = "SELECT `name`, `dianhua`, `youbian`, `dizhi`, `qq` FROM `tb_user` WHERE `id`=$userid";
 $xx = $Db->useSQL($sql);
@@ -30,8 +32,27 @@ while ($list = $result[$n]) {
     $n++;
     //echo "<br>";
 }
+//print_r($sp);
+//echo "<br>";
+//print_r($xx);
+
+$ssp = $sp[0];
+$xxx = $xx[0];
+print_r($ssp);
+echo "<br>";
+print_r($xxx);
+
+$sql = "INSERT INTO `tb_dingdan` (`dingdanhao`, `mingcheng`, `shuliang`, `shouhuoren`, `dizhi`,`youbian`, `dianhua`, `shijian`, `zhuangtai`) VALUES ('$dingdanhao','$ssp[0]', '$ssp[2]','$xxx[0]','$xxx[3]','$xxx[2]','$xxx[1]','$shijian','已付款')";
+$result = $Db->useSQL($sql);
+var_dump($result);
+if($result) {
+    echo "<script>alert('成功！')</script>";
+} else {
+    echo "<script>alert('失败！')</script>";
+}
 
 $smarty->assign('xx',$xx[0]);
 $smarty->assign('sp',json_encode($sp));
 $smarty->assign('dingdanhao',$dingdanhao);
+$smarty->assign('shijian',$shijian);
 $smarty->display('shengchengdingdan.html');
