@@ -16,7 +16,11 @@ while($res = mysqli_fetch_row($result))
 $arra[$n]=$res;
 $n++;
 }
+$sqls="select mingcheng from tb_shangpin where id=4";
+$re00=mysqli_query($conn,$sqls);
+$results=mysqli_fetch_row($re00);
 $smarty->assign('arra', json_encode($arra));
+$smarty->assign('k', $results[0]);
 $smarty->display('index.php');
 
 

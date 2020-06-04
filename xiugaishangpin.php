@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>删除商品</title>
+    <title>修改商品浏览</title>
     <style>
         *{
             margin:0px;
@@ -18,18 +18,15 @@
             background-color: #fff11b;
             color: #ff5a5a;
         }
-        .m_td{
-            text-align: left;
-        }
     </style>
 </head>
 <body>
+
 <table>
     <tr class="tr1">
-        <td colspan="11" class="td1" align="center">删除商品</td>
+        <td colspan="10" class="td1" align="center">修改商品</td>
     </tr>
     <tr align="center">
-        <td></td>
         <td height="25" width="5%" class="top">id</td>
         <td class="top">商品名称</td>
         <td class="top">商品品牌</td>
@@ -41,25 +38,21 @@
         <td class="top">上市时间</td>
         <td width="5%" class="top">操作</td>
     </tr>
-    <tr>
-        <td><input type="checkbox" name="" id="chk" value=""></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><a href="" onclick = "">删除</a></td>
-    </tr>
-    <tr>
-        <td colspan="11" class="m_td">
-            <a href="" onClick="">全部选择/取消</a>&nbsp;&nbsp;
-            <input type="hidden" name="action" value="delall"><input type="submit" value="删除选择" onclick = ''>&nbsp;&nbsp;
-        </td>
-    </tr>
+    <?php
+    include("conn/conn.php");
+    $Db = new connDB('localhost', 'root', '', 'db_ecoshop', '3308', 'utf-8');    //实例化connDb
+    $conn = $Db->getConnect(); //获取数据库连接对象
+    $sql="select id,mingcheng,pingpai,leibie,shichangjia,zhekoujia,shuliang,tuijian,shijian from tb_shangpin";
+    $res=mysqli_query($conn,$sql);
+
+    while($result=mysqli_fetch_row($res))
+    {echo"<tr> ";
+    for($i=0;$i<count($result);$i++)
+    echo"<td>".$result[$i]."</td>";
+       echo" <td><a href=xiugaishangpin-1.php?action=update&id=".$result[0].">修改</a></td>";
+    }
+    ?>
+
 </table>
 
 </body>

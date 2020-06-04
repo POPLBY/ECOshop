@@ -11,7 +11,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     '2e829a1676c66be05af4d66e46fc8a0e50c9a449' => 
     array (
-      0 => 'F:\\wamp64\\www\\EcoShop\\index.html',
+      0 => 'F:\\wamp64\\www\\EcoShop\\index.php',
       1 => 1590978008,
       2 => 'file',
     ),

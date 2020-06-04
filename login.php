@@ -3,7 +3,7 @@ include("conn/conn.php");
 $type = $_POST['type'];
 $name = $_POST["user"];
 $pwd = $_POST["pwd"];
-$Db = new connDB('localhost','root','123','db_ecoshop','3308','utf-8');    //实例化connDb
+$Db = new connDB('localhost','root','','db_ecoshop','3308','utf-8');    //实例化connDb
 $conn = $Db->getConnect();         //获取数据库连接对象
 
 if ($name == "") {

@@ -12,7 +12,9 @@ $result = mysqli_query($conn, $sql);
 $res = mysqli_fetch_row($result);
 $smarty->assign('row', $res);
 
-$sql = "select * from `tb_pingjia` where spid = 1";
+$spid = $_GET['id'];
+
+$sql = "select * from `tb_pingjia` where spid = $spid";
 $result = mysqli_query($conn, $sql);
 $res = mysqli_fetch_row($result);
 $smarty->assign('pj', $res);
