@@ -10,23 +10,24 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($re) > 0) {
         $result = mysqli_fetch_row($re);
         header("location:chanpinzhanshi.php?id=$result[0]");
-        } else {
-                echo "<script>
+    } else {
+        echo "<script>
                 alert('搜索失败');
+            location.href = 'tuijian.php'
                 </script>";
-        }
+    }
 
 }
 
 
-$sql = "select leibie from tb_shangpin where leibie=".$_GET['id'];
+$sql = "select leibie from tb_shangpin where leibie=" . $_GET['id'];
 $re = mysqli_query($conn, $sql);
 if (mysqli_num_rows($re) > 0) {
     $result = mysqli_fetch_row($re);
     header("location:chanpinzhanshi.php?id=$result[0]");
 } else {
     echo "<script>
-alert('搜索失败');
+alert('搜索失败');location.href = 'tuijian.php'
     </script>";
 
 }

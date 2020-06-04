@@ -51,6 +51,16 @@
         &nbsp
         &nbsp
         <span><a href="#first">推荐商品</a></span>
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        <span><a href="#">购物车</a></span>
     </div>
 
 
@@ -233,6 +243,7 @@ var timer = setInterval(function () {
     var node2=document.getElementById("tp");
     node.removeChild(node2);
    x.innerHTML="抢购结束";
+        f.appendChild(x);
     }
 
 

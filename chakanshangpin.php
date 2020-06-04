@@ -2,7 +2,7 @@
 //include ('checkSession.php');
 
 include ('conn/conn.php');
-$Db = new connDB('localhost', 'root', '123', 'db_ecoshop', '3308', 'utf-8');
+$Db = new connDB('localhost', 'root', '', 'db_ecoshop', '3308', 'utf-8');
 $conn = $Db->getConnect();
 
 //header("Content-type: textml; charset=UTF-8");

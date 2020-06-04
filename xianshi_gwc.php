@@ -4,7 +4,7 @@ include ('libs/Smarty.class.php');
 include ('conn/conn.php');
 
 $smarty = new Smarty();
-$Db = new connDB('localhost', 'root', '123', 'db_ecoshop', '3308', 'utf-8');
+$Db = new connDB('localhost', 'root', '', 'db_ecoshop', '3308', 'utf-8');
 $conn = $Db->getConnect();
 
 $userid = 2;

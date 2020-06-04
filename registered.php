@@ -50,7 +50,7 @@ if ($daan == "") {
     exit();
 }
 
-$Db = new connDB('localhost', 'root', '123', 'db_ecoshop', '3308', 'utf-8');    //实例化connDb //获取数据库连接对象
+$Db = new connDB('localhost', 'root', '', 'db_ecoshop', '3308', 'utf-8');    //实例化connDb //获取数据库连接对象
 $conn = $Db->getConnect();
 
 $sql = "insert into `tb_user` (`id`, `name`, `pwd`, `dianhua`, `youbian`, `dizhi`, `qq`, `timu`, `daan`) VALUES (NULL,'$name','$pwd','$dianhua','$youbian','$dizhi','$qq','$timu','$daan')";

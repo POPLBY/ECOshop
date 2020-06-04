@@ -5,7 +5,7 @@ include ("conn/conn.php");
 
 //$smarty = new Smarty();
 
-$Db = new connDB('localhost', 'root', '123', 'db_ecoshop', '3308', 'utf-8');
+$Db = new connDB('localhost', 'root', '', 'db_ecoshop', '3308', 'utf-8');
 $conn = $Db->getConnect();
 
 $mingcheng = $_POST['text2'];
@@ -19,9 +19,9 @@ $shijian = $_POST['text9'];
 $jianjie = $_POST['textarea'];
 
 $sql = "INSERT INTO `tb_shangpin` 
-            (`id`, `mingcheng`, `pingpai`, `leibie`, `shichangjia`, `zhekoujia`, `shuliang`, `xiaoliang`, `tuijian`, `shijian`, `tupian`, `jianjie`, `lianjie`) 
+            ( `mingcheng`, `pingpai`, `leibie`, `shichangjia`, `zhekoujia`, `shuliang`, `xiaoliang`, `tuijian`, `shijian`, `tupian`, `jianjie`) 
         VALUES 
-            (NUll, '$mingcheng', '$pingpai', '$leibie', '$shichangjia', '$zekoujia', NULL, NULL, '$tuijian', '$shijian', NULL, '$jianjie', NULL);";
+            ( '$mingcheng', '$pingpai', '$leibie', '$shichangjia', '$zekoujia', NULL, NULL, '$tuijian', '$shijian', NULL, '$jianjie');";
 $result = $Db->useSQL($sql);
 if($result) {
     echo "<script>alert('添加成功！');location.href = history.back()</script>";

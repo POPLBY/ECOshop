@@ -15,8 +15,8 @@ $arra= array();
 $n=0;
 while($res = mysqli_fetch_row($result))
 {
-$arra[$n]=$res;
-$n++;
+    $arra[$n]=$res;
+    $n++;
 }
 
 $sqls="select mingcheng from tb_shangpin where id=4";

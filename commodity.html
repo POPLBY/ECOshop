@@ -37,10 +37,11 @@
         </div>
 
         <div class="buy">
-            <form action="#">
+            <form action="add_gwc.php" method="post" name="form1">
                 <span style="font: 20px '微软雅黑';">请输入购买数量：</span>
-                <input type="text" name="shuliang" placeholder="1">
+                <input type="text" name="sl" placeholder="1" value="1">
                 <span>库存：{$row[6]}</span>
+                <input type="hidden" name="id" value={$id}>
                 <br>
                 <input type="submit" name="buy" value="加入购物车">
             </form>

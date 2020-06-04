@@ -27,13 +27,19 @@ if($type == '0'){
 if ($rs > 0 || $rs) {
     session_start();
     $_SESSION['user'] = $rs;
+    $_SESSION['user_id'] = $rs[0][0];
     //设置登录类型
     if($type == '0') {
         $_SESSION['type'] = 'admin';    //设置为管理员
     }else {
         $_SESSION['type'] = 'user';     //设置为普通用户
     }
-    echo "<script>alert('欢迎登录！');location.href = 'houtai.html'</script>";
+    echo "<script>alert('欢迎登录！');</script>";
+    if($_SESSION['type'] == 'admin') {
+        header("location:houtai.html");
+    } else {
+        header("location:tuijian.php");
+    }
 } else {
     echo "<script>alert('用户名或密码错误！');location.href ='login.html'</script>";
 }
