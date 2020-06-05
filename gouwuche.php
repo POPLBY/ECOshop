@@ -112,7 +112,7 @@
 </head>
 <body>
 <div class="head1">
-    <img src="images/gwc4.png"><a href="#">商城首页</a>
+    <img src="images/gwc4.png"><a href="index.php">商城首页</a>
 </div>
 <div class="body">
     <div class="first"><img src="images/Logo.png" class="i1"><img src="images/gwc3.png" class="i2"></div>
