@@ -134,8 +134,16 @@
                 include ('conn/conn.php');
                 $Db = new connDB('localhost', 'root', '', 'db_ecoshop', '3308', 'utf-8');
                 $conn = $Db->getConnect();
-                $sqlstr = "SELECT * FROM `tb_gouwuche` order by id";
-                $result = mysqli_query($conn,$sqlstr);
+                $sqlstr = "SELECT * FROM `tb_gouwuche` order by id"; //定义查询语句
+                $pagesize = 4 ;									//每页显示记录数
+                $total = mysqli_query($conn,$sqlstr);//执行查询语句
+                $totalNum = mysqli_num_rows($total);					//总记录数
+                $pagecount = ceil($totalNum/$pagesize);						//总页数
+                (!isset($_GET['page']))?($page = 1):$page = $_GET['page'];				//当前显示页数
+                ($page <= $pagecount)?$page:($page = $pagecount);//当前页大于总页数时把当前页定义为总页数
+                $f_pageNum = $pagesize * ($page - 1);								//当前页的第一条记录
+                $sqlstr1 = $sqlstr." limit ".$f_pageNum.",".$pagesize;//定义SQL语句，通过limit关键字控制查询范围和
+                $result = mysqli_query($conn,$sqlstr1);
                 $sum=0;
                 while ($rows = mysqli_fetch_row($result)){
                     echo "<tr><td height='25' align='center' class='m_td'>";
@@ -163,6 +171,22 @@
                         <td class="jiesuan"><a href="">去结算</a></td>
                     </tr>
             </table>
+            <?php
+            echo "共".$totalNum."件商品&nbsp;&nbsp;";
+            echo "第".$page."页/共".$pagecount."页&nbsp;&nbsp;";
+            if($page!=1){//如果当前页不是1则输出有链接的首页和上一页
+                echo "<a href='?page=1'>首页</a>&nbsp;";
+                echo "<a href='?page=".($page-1)."'>上一页</a>&nbsp;&nbsp;";
+            }else{//否则输出没有链接的首页和上一页
+                echo "首页&nbsp;上一页&nbsp;&nbsp;";
+            }
+            if($page!=$pagecount){//如果当前页不是最后一页则输出有链接的下一页和尾页
+                echo "<a href='?page=".($page+1)."'>下一页</a>&nbsp;";
+                echo "<a href='?page=".$pagecount."'>尾页</a>&nbsp;&nbsp;";
+            }else{//否则输出没有链接的下一页和尾页
+                echo "下一页&nbsp;尾页&nbsp;&nbsp;";
+            }
+            ?>
         </form>
     </div>
 </div>
